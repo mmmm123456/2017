@@ -1,0 +1,32 @@
+footer {
+    .social {
+        position: fixed;
+        left: 60px;
+        bottom: 55px;
+        z-index: 10;
+
+        .social__media {
+            display: inline-block;
+            text-align: center;
+            margin: 0 15px 0 0;
+            color: #cac8c8;
+            -moz-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+            -o-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+            -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+            transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+        }
+
+        .social__media:hover {
+            color: #cc8941;
+        }
+    }
+
+    .social.\--lock {
+        bottom: auto;
+        position: absolute;
+    }
+
+    .social.\--hide {
+        display: none;
+    }
+}

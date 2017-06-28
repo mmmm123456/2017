@@ -1,0 +1,136 @@
+html {
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    outline: none;
+
+    body {
+        height: 100%;
+
+        #home {
+            cursor: pointer;
+            background-color: #b8b7b7;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-user-select: none;
+            overflow: hidden;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover;
+            @include make-col();
+            @include make-col-span(12);
+
+            .overlay-landing {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background-color: #161616;
+                opacity: 0.57;
+                -moz-transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                -o-transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                -webkit-transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+            }
+
+            .moldura-landing {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                padding: 25px;
+                -moz-animation: fade 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                -webkit-animation: fade 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                animation: fade 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                @include media-breakpoint-down(md) {
+                    padding: 10px;
+                }
+
+                .moldura-landing__borda {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    background-color: #161616;
+
+                    .moldura-landing__left {
+                        left: -50%;
+                        border-right: 0;
+                    }
+
+                    .moldura-landing__right {
+                        right: -50%;
+                        border-left: 0;
+                    }
+
+                    .moldura-landing__left,
+                    .moldura-landing__right {
+                        display: block;
+                        width: 50%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        background-color: #fff;
+                        z-index: 5;
+                        -moz-transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                        -o-transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                        -webkit-transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                        transition: all 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+                    }
+
+                    .moldura-landing__left.\--active {
+                        -moz-transform: translateX(100%);
+                        -ms-transform: translateX(100%);
+                        -webkit-transform: translateX(100%);
+                        transform: translateX(100%);
+                    }
+
+                    .moldura-landing__right.\--active {
+                        -moz-transform: translateX(-100%);
+                        -ms-transform: translateX(-100%);
+                        -webkit-transform: translateX(-100%);
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+        }
+
+        .animation-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: 3;
+            opacity: 0;
+            -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0, 0.995);
+            -o-transition: opacity 1s cubic-bezier(0.42, 0, 0, 0.995);
+            -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0, 0.995);
+            transition: opacity 1s cubic-bezier(0.42, 0, 0, 0.995);
+        }
+
+        .animation-container.\--in {
+            opacity: 1;
+        }
+
+        .animation-container.\--active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .animation-container.\--out {
+            z-index: 1;
+            display: none;
+            -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0, 0.995);
+            -o-transition: opacity 1s cubic-bezier(0.42, 0, 0, 0.995);
+            -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0, 0.995);
+            transition: opacity 1s cubic-bezier(0.42, 0, 0, 0.995);
+        }
+    }
+}

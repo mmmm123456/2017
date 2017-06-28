@@ -1,0 +1,22 @@
+{
+  "name": "2017",
+  "description": "Meng ZHAO book 2017",
+  "main": "index.js",
+  "authors": [
+    "Meng ZHAO zhaomeng0401@hotmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2",
+    "font-awesome": "^4.7.0"
+  }
+}

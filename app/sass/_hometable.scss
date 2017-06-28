@@ -1,0 +1,47 @@
+html {
+    .table {
+        display: table;
+        width: 100%;
+        height: 100%;
+
+        .frase {
+            text-align: center;
+            font-size: 14px;
+            margin-top: -93px;
+            color: #cc8941;
+            text-transform: uppercase;
+            position: relative;
+            opacity: 0;
+            -moz-animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards, fade 0.5s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+            -webkit-animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards, fade 0.5s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+            animation: up 1s cubic-bezier(0.42, 0, 0, 0.995) 1s forwards, fade 0.5s 1s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+            letter-spacing: 10.542px;
+        }
+
+        .frase strong:before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: #fff;
+            display: block;
+            margin: 10px auto 60px;
+        }
+
+        .frase.animated {
+            -moz-animation: fade 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+            -webkit-animation: fade 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+            animation: fade 0.5s cubic-bezier(0.42, 0, 0, 0.995);
+        }
+
+        .table__valign {
+            display: table-cell;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .table__valign.\--bottom {
+            vertical-align: bottom;
+        }
+    }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Resource-type" content="Document" />
+    <link rel="apple-touch-icon" href="./app/imgs/favicons/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./app/imgs/favicons/favicon.ico">
+
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	  <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link href="./app/css/main.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="css/principale.css" /> -->
+
+    <!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+
+    <div class="barra-menu"></div>
+
+    <nav class="menu --works">
+        <div class="menu__link --about">
+            <a class="menu__logo" href="javascript:;" onClick="window.open('./index.html', '_self');"></a>
+            <a class="menu__text link-page" href="javascript:;" onClick="window.open('./about.html', '_self');">about</a>
+        </div>
+        <div class="menu__link --works">
+            <a class="menu__logo" href="javascript:;" onClick="window.open('./index.html', '_self');"></a>
+            <a class="menu__text link-page" href="javascript:;" onClick="window.open('./works.html', '_self');">works</a>
+        </div>
+    </nav>
+    </article>
+
+    <div id="fullpage">
+        <section class="section " id="section1">
+            <div class="container">
+                <h1>Slide 1</h1>
+                <p>An easy and beautiful way to navigate throw the sections</p>
+            </div>
+        </section>
+
+        <section class="section bg_black" id="section2">
+            <div class="slide" id="slide1">
+                <div class="intro">
+                    <div class="inner_left col-lg-6 col-md-6 col-sm-12">
+                        <h1>LYRICS & MOTION DESIGN</h1>
+                        <p>
+                            I stumbled through this song that I replayed it instantly.<br />
+                            Here is a video I made with this music.
+                        </p>
+                    </div>
+                    <div class="inner_right col-lg-6 col-md-6 col-sm-12">
+                        Client:projet personnel<br /> Rôle : motion design, typographie<br /> Logiciels : After Effect - Premiere Pro - Illustrator<br /> Date : avril 2016<br />
+                        <a href=""><i class="fa fa-long-arrow-right fa-4" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide2">
+                <h1>Slide 2</h1>
+            </div>
+
+            <div class="slide" id="slide3">
+                <h1>Slide 3</h1>
+            </div>
+        </section>
+
+
+        <section class="section" id="section3">
+            <div class="intro">
+                <h1 class="fadeInLeftBig1 animated" data-animated="fadeInLeftBig">Slide 3</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="section4">
+            <div class="intro">
+                <h1 class="fadeInLeftBig1 animated" data-animated="fadeInLeftBig">Slide 3</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="section5">
+            <div class="intro">
+                <h1 class="fadeInLeftBig1 animated" data-animated="fadeInLeftBig">Slide 3</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="./app/js/libs/scrolloverflow.js"></script>
+    <script type="text/javascript" src="./app/js/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="./app/js/libs/jquery.fullPage.js"></script>
+
+
+    <!-- FULLPAGE -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchors: ['1Page', '2Page', '3Page', '4Page', '5Page'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['1 page', '2 page', '3 page', '4 page', '5 page']
+            });
+        });
+    </script>
+
+    <!-- WAYPOINT -->
+    <script>
+        //Animate from top
+        $('.animated').waypoint(function() {
+            $(this).toggleClass($(this).data('animated'));
+        }, {
+            offset: 'bottom-in-view'
+        });
+
+        //Animate from bottom
+        $('.animated').waypoint(function() {
+            $(this).toggleClass($(this).data('animated'));
+
+        });
+    </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./app/js/libs/bootstrap.min.js"></script>
+
+</body>
+
+</html>

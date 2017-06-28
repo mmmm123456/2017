@@ -1,0 +1,312 @@
+.barra-menu {
+    width: 100%;
+    height: 80px;
+    display: block;
+    top: -80px;
+    left: 0;
+    z-index: 9;
+    background-color: #161616;
+    -moz-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    -o-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    position: fixed !important;
+    padding: 0 !important;
+    @include make-col();
+    @include make-col-span(12);
+    @include media-breakpoint-down(sm) {
+        height: 60px;
+    }
+}
+
+.barra-menu.\--open {
+    top: 0;
+}
+
+.barra-menu.\--close {
+    top: -80px;
+}
+
+.menu {
+    position: fixed !important;
+    top: 60px;
+    left: 300px;
+    left: 60px;
+    z-index: 10;
+    -moz-transition: all 1s cubic-bezier(0.42, 0, 0, 0.995);
+    -o-transition: all 1s cubic-bezier(0.42, 0, 0, 0.995);
+    -webkit-transition: all 1s cubic-bezier(0.42, 0, 0, 0.995);
+    transition: all 1s cubic-bezier(0.42, 0, 0, 0.995);
+    @include make-col();
+    @include make-col-span(12);
+    @include media-breakpoint-down(md) {
+        width: auto;
+        top: 15px !important;
+        left: 15px !important;
+        margin: 0 !important;
+    }
+
+    width: auto;
+    padding: 0;
+
+    .menu__link {
+        display: none;
+        height: 25px;
+        line-height: 25px;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding-left: 110px !important;
+        overflow: hidden;
+        color: #fff;
+        background: url('../imgs/meng-menu.png') left center no-repeat;
+        -moz-transition: all 1s cubic-bezier(0.42, 0, 0, 0.995);
+        -o-transition: all 1s cubic-bezier(0.42, 0, 0, 0.995);
+        -webkit-transition: all 1s cubic-bezier(0.42, 0, 0, 0.995);
+        transition: all 1s cubic-bezier(0.42, 0, 0, 0.995);
+
+        .menu__text {
+            filter:  "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            opacity: 0;
+            filter:  "progid: DXImageTransform.Microsoft.Alpha(enabled=false)";
+            opacity: 1;
+        }
+
+        .menu__logo {
+            position: absolute;
+            display: block;
+            width: 28px;
+            height: 28px;
+            top: 0;
+            left: 0;
+        }
+        @include make-col();
+        @include make-col-span(12);
+        @include media-breakpoint-down(md) {
+            height: 29.5px;
+            line-height: 29.5px;
+            font-size: 12px;
+            padding-left: 45px !important;
+            overflow: visible;
+            position: relative;
+            background: url('../imgs/meng_icon2x.png') left center no-repeat;
+            -moz-background-size: auto 100%;
+            -o-background-size: auto 100%;
+            -webkit-background-size: auto 100%;
+            background-size: auto 100%;
+        }
+    }
+
+    .menu__link:hover {
+        .menu__text {
+            filter:  "progid: DXImageTransform.Microsoft.Alpha(enabled=false)";
+            opacity: 1;
+        }
+    }
+}
+
+.menu.\--works {
+    .menu__link.\--about {
+        display: block;
+    }
+    @include make-col();
+    @include make-col-span(12);
+    @include media-breakpoint-down(md) {
+        width: 100%;
+        left: 0 !important;
+        padding: 0 15px;
+    }
+
+    .menu__link {
+        @include make-col();
+        @include make-col-span(12);
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            padding-left: 37px !important;
+            padding-right: 50px !important;
+        }
+    }
+
+    .menu__link:before {
+        @include make-col();
+        @include make-col-span(12);
+        @include media-breakpoint-down(md) {
+            content: " ";
+            display: block;
+            height: 1px;
+            position: relative;
+            top: 14px;
+            background-color: #fff;
+        }
+    }
+
+    .menu__text {
+        @include make-col();
+        width: auto !important;
+        padding: 0 !important;
+        @include make-col-span(12);
+        @include media-breakpoint-down(md) {
+            float: right;
+            margin-right: -50px;
+        }
+    }
+}
+
+.menu.\--work {
+    .menu__link.\--about {
+        display: block;
+    }
+}
+
+.menu.\--about {
+    left: 100%;
+    margin-left: -60px;
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+
+    .menu__link.\--works {
+        display: block;
+    }
+    @include make-col();
+    @include make-col-span(12);
+    @include media-breakpoint-down(md) {
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        width: 100%;
+        left: 0 !important;
+        padding: 0 15px;
+    }
+
+    width: auto;
+    padding: 0;
+
+    .menu__link {
+        @include make-col();
+        @include make-col-span(12);
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            padding-left: 37px !important;
+            padding-right: 50px !important;
+        }
+    }
+
+    .menu__link:before {
+        @include make-col();
+        @include make-col-span(12);
+        @include media-breakpoint-down(md) {
+            content: " ";
+            display: block;
+            height: 1px;
+            position: relative;
+            top: 14px;
+            background-color: #fff;
+        }
+    }
+
+    .menu__text {
+        @include make-col();
+        @include make-col-span(12);
+        width: auto !important;
+        padding: 0 !important;
+        @include media-breakpoint-down(md) {
+            float: right;
+            margin-right: -50px;
+        }
+    }
+}
+
+.menu.\--open {
+    -moz-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    -o-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    top: 25px;
+}
+
+.menu.\--close {
+    -moz-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    -o-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    top: -80px !important;
+}
+
+.back-works {
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+    padding-right: 50px;
+    position: fixed;
+    display: block;
+    top: 60px;
+    right: 60px;
+    z-index: 10;
+    -moz-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    -o-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    transition: all 0.3s cubic-bezier(0.42, 0, 0, 0.995);
+    @include make-col();
+    @include make-col-span(12);
+    @include media-breakpoint-down(md) {
+        top: 15px;
+        right: 15px;
+        text-indent: -9999px;
+        padding-right: 0;
+        width: 30px;
+        height: 30px;
+    }
+
+    .back-works__icon {
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 2px;
+        background: url('../imgs/icons/back-works.png?1478868301') center no-repeat;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        -webkit-background-size: 100%;
+        background-size: 100%;
+        -moz-transition: all 300ms cubic-bezier(0.42, 0, 0, 0.995);
+        -o-transition: all 300ms cubic-bezier(0.42, 0, 0, 0.995);
+        -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0, 0.995);
+        transition: all 300ms cubic-bezier(0.42, 0, 0, 0.995);
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}
+
+.back-works.\--open {
+    @include make-col();
+    @include make-col-span(12);
+    @include media-breakpoint-down(md) {
+        top: 15px;
+    }
+}
+
+.back-works:active,
+.back-works:hover {
+    .back-works__icon {
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+.back-works.\--hide {
+    display: none;
+}
+
+.back-works.\--open {
+    top: 25px;
+}
+
+.back-works.\--close {
+    top: -80px !important;
+}

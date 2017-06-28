@@ -1,0 +1,47 @@
+.logo-meng-landing {
+    @include make-col();
+    @include make-col-span(12);
+    display: block;
+    position: absolute;
+    height: 50px;
+    margin-left: -150px;
+    top: 21%;
+    left: 50%;
+    background: url('../imgs/meng_project.svg') 0 0 no-repeat;
+    background-size: auto 100%;
+    -moz-animation: down 1s cubic-bezier(0.42, 0, 0, 0.995), fade 1s cubic-bezier(0.42, 0, 0, 0.995);
+    -webkit-animation: down 1s cubic-bezier(0.42, 0, 0, 0.995), fade 1s cubic-bezier(0.42, 0, 0, 0.995);
+    animation: down 1s cubic-bezier(0.42, 0, 0, 0.995), fade 1s cubic-bezier(0.42, 0, 0, 0.995);
+    @include media-breakpoint-down(md) {
+        top: 30px;
+        height: 40px;
+    }
+    @include media-breakpoint-down(sm) {
+        width: 60px;
+        margin-left: -16px;
+    }
+}
+
+#services {
+    .logo-meng-landing {
+        @include make-col();
+        @include make-col-span(12);
+
+        top: 85px;
+        @include media-breakpoint-down(sm) {
+            top: 35px;
+        }
+    }
+}
+
+#privacy {
+    .logo-meng-landing {
+        @include make-col();
+        @include make-col-span(12);
+
+        top: 85px;
+        @include media-breakpoint-down(sm) {
+            top: 35px;
+        }
+    }
+}
