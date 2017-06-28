@@ -1,0 +1,63 @@
+#fullpage {
+    .bg_black {
+        background-color: #000;
+        color: #fff;
+
+        .video {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+
+    .bg_assurancia {
+        .img01 {
+            background: url("../imgs/work_assurancia5.jpg") center center;
+            background-size: cover;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .bg_total {
+        .img01 {
+            background: url("../imgs/total-atelier-01.jpg") center center;
+            background-size: cover;
+            width: 100%;
+            height: auto;
+        }
+
+        .img02 {
+            background: url("../imgs/total-atelier-01.jpg") center center;
+            background-size: cover;
+            width: 100%;
+            height: auto;
+        }
+
+        .img03 {
+            background: url("../imgs/total-atelier-02.jpg") center center;
+            background-size: cover;
+            width: 100%;
+            height: auto;
+        }
+
+        .img04 {
+            background: url("../imgs/total-atelier-03.jpg") center center;
+            background-size: cover;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .intro {
+        @include make-col();
+        @include make-col-span(12);
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        float: inherit;
+        @include media-breakpoint-down(md) {
+            width: 90%;
+        }
+    }
+}

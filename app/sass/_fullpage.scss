@@ -5,28 +5,15 @@ html {
         overflow: hidden;
         /*Avoid flicker on slides transitions for mobile phones #336 */
         -webkit-tap-highlight-color: transparent;
+        @include media-breakpoint-down(md) {
+            overflow: scroll !important;
+        }
 
         body {
             #fullpage {
+
                 section {
-
                     text-align: center;
-
-                    .slide {
-                        .intro {
-                            @include make-col();
-                            @include make-col-span(12);
-                            width: 80%;
-                            margin: 0 auto;
-                            text-align: left;
-                            float: inherit;
-                            @include media-breakpoint-down(md) {
-                                width: 90%;
-                            }
-
-                            .inner_left {}
-                        }
-                    }
 
                     &.fp-section {
                         position: relative;
@@ -35,7 +22,6 @@ html {
                         -moz-box-sizing: border-box;
                         /* <=28 */
                         box-sizing: border-box;
-
                     }
 
                     &.fp-table {
